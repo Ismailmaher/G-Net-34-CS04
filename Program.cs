@@ -31,8 +31,22 @@ namespace G_Net_34_CS04
 
         //Sw1.Stop();
         //Console.WriteLine("String Time: " + Sw1.ElapsedMilliseconds + " ms");
+    //    Stopwatch Sw2 = Stopwatch.StartNew();
+    //    StringBuilder sb = new StringBuilder();
+
+    //    for (int i = 1; i <= 5000; i++)
+    //    {
+    //        sb.Append("PROD-");
+    //        sb.Append(i);
+    //        sb.Append(",");
+    //    }
+
+    //Sw2.Stop();
+    //    Console.WriteLine("StringBuilder Time: " + Sw2.ElapsedMilliseconds + " ms");
+  
 
         #endregion
+      
         #endregion
     }
 }
