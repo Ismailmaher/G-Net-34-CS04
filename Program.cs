@@ -49,30 +49,30 @@ namespace G_Net_34_CS04
         #endregion
 
         #region Question 2
-        Console.Write("Enter age: ");
-            int age = int.Parse(Console.ReadLine());
-            double price = 0;
-            if (age < 5)
-                price = 0;
-            else if (age <= 12)
-                price = 30;
-            else if (age <= 59)
-                price = 50;
-            else
-                price = 25;
-            Console.Write("Enter day number (0 Sunday to 6 Saturday): ");
-            int day = int.Parse(Console.ReadLine());
-            if (day == 5 || day == 6)
-            {
-                price += 10;
-            }
-            Console.Write("Student ID? (yes/no): ");
-            string student = Console.ReadLine().ToLower();
-            if (student == "yes")
-            {
-                price *= 0.8;
-            }
-            Console.WriteLine("Final price: " + price + " LE");
+        //Console.Write("Enter age: ");
+        //    int age = int.Parse(Console.ReadLine());
+        //    double price = 0;
+        //    if (age < 5)
+        //        price = 0;
+        //    else if (age <= 12)
+        //        price = 30;
+        //    else if (age <= 59)
+        //        price = 50;
+        //    else
+        //        price = 25;
+        //    Console.Write("Enter day number (0 Sunday to 6 Saturday): ");
+        //    int day = int.Parse(Console.ReadLine());
+        //    if (day == 5 || day == 6)
+        //    {
+        //        price += 10;
+        //    }
+        //    Console.Write("Student ID? (yes/no): ");
+        //    string student = Console.ReadLine().ToLower();
+        //    if (student == "yes")
+        //    {
+        //        price *= 0.8;
+        //    }
+        //    Console.WriteLine("Final price: " + price + " LE");
 
             #endregion
 
@@ -131,9 +131,63 @@ namespace G_Net_34_CS04
             //               : tem < 35 ? "Warm. Stay hydrated."
             //               : "Hot! Avoid sun exposure.";
             //Console.WriteLine(Weather);
+            #region Question 6
+
+            int[] scores = { 85, 42, 91, 67, 55, 78, 39, 88, 72, 95, 60, 48 };
+            Console.WriteLine("Failing scores (below 50):");
+            foreach (int score in scores)
+            {
+                if (score < 50)
+                {
+                    Console.Write(score);
+                    Console.Write("/n");
+                }
+            }
+            Console.WriteLine("/n");
+            foreach (int score in scores)
+            {
+                if (score > 90)
+                {
+                    Console.WriteLine(score);
+                    break;
+                }
+            }
+            int sum = 0;
+            int count = 0;
+            foreach (int score in scores)
+            {
+                if (score >= 40)
+                {
+                    sum += score;
+                    count++;
+                }
+            }
+            double average = sum / count;
+            Console.WriteLine($"Class average (excluding absents)): {average}");
+
+
+            int gradeA = 0, gradeB = 0, gradeC = 0, gradeD = 0, gradeF = 0;
+
+            foreach (int score in scores)
+            {
+                if (score >= 90) gradeA++;
+                else if (score >= 80) gradeB++;
+                else if (score >= 70) gradeC++;
+                else if (score >= 60) gradeD++;
+                else gradeF++;
+            }
+
+            Console.WriteLine("Grade distribution:");
+            Console.WriteLine("A: " + gradeA);
+            Console.WriteLine("B: " + gradeB);
+            Console.WriteLine("C: " + gradeC);
+            Console.WriteLine("D: " + gradeD);
+            Console.WriteLine("F: " + gradeF);
+
+            #endregion
             #endregion
 
-          
+
 
             #endregion
 
