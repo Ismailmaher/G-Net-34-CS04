@@ -1,11 +1,13 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.IO.Pipelines;
 using System.Text;
-using System;
 
 namespace G_Net_34_CS04
 {
     internal class Program
     {
+        static void Main(string[] args) { 
         #region G-Net-34-CS04 
         #region Question 1
         //(a) Explain why this code is inefficient.Reference what happens in memory.
@@ -31,22 +33,49 @@ namespace G_Net_34_CS04
 
         //Sw1.Stop();
         //Console.WriteLine("String Time: " + Sw1.ElapsedMilliseconds + " ms");
-    //    Stopwatch Sw2 = Stopwatch.StartNew();
-    //    StringBuilder sb = new StringBuilder();
+        //    Stopwatch Sw2 = Stopwatch.StartNew();
+        //    StringBuilder sb = new StringBuilder();
 
-    //    for (int i = 1; i <= 5000; i++)
-    //    {
-    //        sb.Append("PROD-");
-    //        sb.Append(i);
-    //        sb.Append(",");
-    //    }
+        //    for (int i = 1; i <= 5000; i++)
+        //    {
+        //        sb.Append("PROD-");
+        //        sb.Append(i);
+        //        sb.Append(",");
+        //    }
 
-    //Sw2.Stop();
-    //    Console.WriteLine("StringBuilder Time: " + Sw2.ElapsedMilliseconds + " ms");
-  
+        //Sw2.Stop();
+        //    Console.WriteLine("StringBuilder Time: " + Sw2.ElapsedMilliseconds + " ms");
+        #endregion
+
+        #region Question 2
+        Console.Write("Enter age: ");
+            int age = int.Parse(Console.ReadLine());
+            double price = 0;
+            if (age < 5)
+                price = 0;
+            else if (age <= 12)
+                price = 30;
+            else if (age <= 59)
+                price = 50;
+            else
+                price = 25;
+            Console.Write("Enter day number (0 Sunday to 6 Saturday): ");
+            int day = int.Parse(Console.ReadLine());
+            if (day == 5 || day == 6)
+            {
+                price += 10;
+            }
+            Console.Write("Student ID? (yes/no): ");
+            string student = Console.ReadLine().ToLower();
+            if (student == "yes")
+            {
+                price *= 0.8;
+            }
+            Console.WriteLine("Final price: " + price + " LE");
+
+            #endregion
 
         #endregion
-      
-        #endregion
+    }
     }
 }
