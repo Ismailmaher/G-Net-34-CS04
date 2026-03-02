@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO.Pipelines;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace G_Net_34_CS04
@@ -75,7 +76,63 @@ namespace G_Net_34_CS04
 
             #endregion
 
+        #region Question 3
+            //(a)A traditional switch statement
+            //aswer(a)
+            //string fileExtension = ".pdf";
+            //string fileType;
+            //switch (fileExtension)
+            //{
+            //    case ".pdf":
+            //        fileType = "PDF Document";
+            //        break;
+
+            //    case ".docx":
+            //    case ".doc":
+            //        fileType = "Word Document";
+            //        break;
+
+            //    case ".xlsx":
+            //    case ".xls":
+            //        fileType = "Excel Spreadsheet";
+            //        break;
+
+            //    case ".jpg":
+            //    case ".png":
+            //    case ".gif":
+            //        fileType = "Image File";
+            //        break;
+
+            //    default:
+            //        fileType = "Unknown File Type";
+            //        break;
+            //}
+            //Console.WriteLine(fileType);
+
+            //}
+            // (b)A switch expression
+            //answer (b)
+            //string fileExtension = ".pdf";
+            //string fileType = fileExtension switch
+            //{
+            //    ".pdf" => "PDF Document",
+            //    ".docx" or ".doc" => "Word Document",
+            //    ".xlsx" or ".xls" => "Excel Spreadsheet",
+            //    ".jpg" or ".png" or ".gif" => "Image File",
+            //    _ => "Unknown File Type"
+            //};
+            //Console.WriteLine(fileType);
+            #endregion
         #endregion
-    }
+
+        #region Question 4
+            int tem = 35;
+            String Weather = tem < 0 ? "Freezing! Stay indoors."
+                           : tem < 25 ? "Cold. Wear a jacket."
+                           : tem < 35 ? "Warm. Stay hydrated."
+                           : "Hot! Avoid sun exposure.";
+            Console.WriteLine(Weather);
+        #endregion
+        }
     }
 }
