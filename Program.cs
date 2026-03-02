@@ -125,13 +125,16 @@ namespace G_Net_34_CS04
             #endregion
 
             #region Question 4
-            int tem = 35;
-            String Weather = tem < 0 ? "Freezing! Stay indoors."
-                           : tem < 25 ? "Cold. Wear a jacket."
-                           : tem < 35 ? "Warm. Stay hydrated."
-                           : "Hot! Avoid sun exposure.";
-            Console.WriteLine(Weather);
+            //int tem = 35;
+            //String Weather = tem < 0 ? "Freezing! Stay indoors."
+            //               : tem < 25 ? "Cold. Wear a jacket."
+            //               : tem < 35 ? "Warm. Stay hydrated."
+            //               : "Hot! Avoid sun exposure.";
+            //Console.WriteLine(Weather);
             #endregion
+
+          
+
             #endregion
 
 
